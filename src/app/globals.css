@@ -2,32 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+h1 {
+  @apply text-4xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h2 {
+  @apply text-3xl;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h3 {
+  @apply text-2xl;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+h6 {
+  @apply text-base;
+}
+
+p {
+  @apply text-base;
+}
+
+li {
+  margin-left: 2.6666em;
+}
+
+a {
+  @apply text-blue-500 hover:text-blue-700 underline underline-offset-2 decoration-solid decoration-blue-500 hover:decoration-blue-700;
+}
+
+.multi-root-editor-container {
+  @apply relative
+}
+
+.multi-root-editor {
+  @apply flex flex-row gap-4;
+}
+
+.sticky-toolbar {
+  @apply sticky top-0 z-10;
+}
+
+.multi-editor-wrapper {
+  @apply flex-1 w-[50%];
+}
+
+.multi-editor-wrapper h4 {
+  @apply mt-4;
+}
+
+.editor-box {
+  @apply mt-2 relative;
+}
+
+.editor-box-border {
+  @apply border border-solid border-gray-300 rounded-sm;
+}
+
+.button-back{
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-2;
+}
+
+.ck.ck-button.ck-off.ck-block-toolbar-button {
+  @apply ms-1.5;
+}
+
+.preview {
+  @apply mt-4;
+}
+
+.preview code pre {
+  @apply p-4 overflow-auto max-w-full max-h-[300px] bg-black text-white;
+}
+
+.preview h3 {
+  @apply mt-4;
 }
